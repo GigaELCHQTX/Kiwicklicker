@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KiwiClicker</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="game-shell">
+      <button class="sound-toggle" id="soundToggle" aria-label="Sound on/off">🔊</button>
+
+      <div class="sky-scene">
+        <div class="cloud cloud-a"></div>
+        <div class="cloud cloud-b"></div>
+
+        <div class="castle castle-left">
+          <div class="tower tower-left"></div>
+          <div class="tower tower-right"></div>
+          <div class="flag flag-left"></div>
+          <div class="flag flag-right"></div>
+        </div>
+
+        <div class="castle castle-right">
+          <div class="tower tower-left"></div>
+          <div class="tower tower-right"></div>
+          <div class="flag flag-left"></div>
+          <div class="flag flag-right"></div>
+        </div>
+
+        <div class="security-building">
+          <div class="roof"></div>
+          <div class="security-sign">SECURITY</div>
+          <div class="guard">
+            <div class="guard-head">
+              <div class="eye left"></div>
+              <div class="eye right"></div>
+              <div class="beak"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="ground"></div>
+
+        <div class="left-side-kiwi kiwi-mini">
+          <div class="mini-body"></div>
+        </div>
+
+        <div class="right-side-kiwi kiwi-mini">
+          <div class="mini-body"></div>
+        </div>
+
+        <div class="score-badge">
+          <span class="score-icon">⚡</span>
+          <span id="totalKiwis">25</span>
+        </div>
+
+        <div class="center-clicker-wrap">
+          <div class="clicker-ring" id="kiwiButton" aria-label="Make kiwis" tabindex="0">
+            <div class="kiwi-clicker">
+              <div class="kiwi-body">
+                <div class="kiwi-eye left"></div>
+                <div class="kiwi-eye right"></div>
+                <div class="kiwi-beak"></div>
+                <div class="kiwi-crown"></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="click-help" id="clickHelp">
+            <span>CLICK or SPACE</span>
+            <span>to make</span>
+          </div>
+
+          <div class="badge-level">
+            <span>LEVEL</span>
+            <strong id="levelValue">0</strong>
+          </div>
+
+          <div class="bonus-display">
+            <span id="kiwiPerSecond">0</span>
+            <span class="bonus-label">kiwis</span>
+          </div>
+
+          <div class="not-enough" id="notEnough">NOT ENOUGH KIWIS</div>
+        </div>
+
+        <div class="shop-button" id="shopButton">
+          <span class="shop-icon">⚡</span>
+          <span>Upgrade</span>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
