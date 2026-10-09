@@ -57,17 +57,6 @@ button {
   overflow: hidden;
 }
 
-.sky-scene::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 200px;
-  height: 120px;
-  background: linear-gradient(to bottom, rgba(255,255,255,0.0), rgba(255,255,255,0.1));
-  pointer-events: none;
-}
-
 .cloud {
   position: absolute;
   height: 38px;
@@ -79,15 +68,15 @@ button {
 }
 
 .cloud-one {
-  top: 55px;
+  top: 50px;
   left: 50%;
   width: 120px;
   transform: translateX(-50%);
 }
 
 .cloud-two {
-  top: 65px;
-  right: 195px;
+  top: 60px;
+  right: 190px;
   width: 100px;
 }
 
@@ -145,9 +134,9 @@ button {
 
 .castle {
   position: absolute;
-  bottom: 125px;
+  bottom: 120px;
   width: 180px;
-  height: 190px;
+  height: 180px;
   background: rgba(207, 201, 192, 0.86);
   border: 4px solid rgba(130, 118, 110, 0.7);
   border-bottom: none;
@@ -166,7 +155,7 @@ button {
 }
 
 .castle-right {
-  right: 20px;
+  right: 18px;
 }
 
 .tower {
@@ -237,9 +226,9 @@ button {
 .security-building {
   position: absolute;
   left: 50%;
-  top: 135px;
+  top: 110px;
   transform: translateX(-50%);
-  width: 230px;
+  width: 220px;
   height: 150px;
   border-radius: 14px 14px 0 0;
   background: rgba(207, 201, 192, 0.8);
@@ -254,7 +243,7 @@ button {
   transform: translateX(-50%);
   top: -18px;
   width: 190px;
-  height: 30px;
+  height: 28px;
   border-radius: 12px 12px 0 0;
   background: rgba(107, 111, 114, 0.25);
 }
@@ -262,9 +251,9 @@ button {
 .security-sign {
   position: absolute;
   left: 50%;
-  top: 28px;
+  top: 25px;
   transform: translateX(-50%);
-  font-size: clamp(12px, 1.1vw, 18px);
+  font-size: clamp(12px, 1.1vw, 20px);
   font-weight: 900;
   letter-spacing: 1px;
   color: rgba(38, 31, 25, 0.78);
@@ -273,10 +262,10 @@ button {
 .guard-head {
   position: absolute;
   left: 50%;
-  bottom: 12px;
+  bottom: 8px;
   transform: translateX(-50%);
-  width: 88px;
-  height: 72px;
+  width: 84px;
+  height: 68px;
   border-radius: 50% 50% 46% 46%;
   background: #7f4a2f;
   border: 5px solid rgba(39, 27, 20, 0.8);
@@ -366,7 +355,7 @@ button {
 .left-side-kiwi,
 .right-side-kiwi {
   position: absolute;
-  bottom: 65px;
+  bottom: 70px;
   width: 70px;
   height: 70px;
   border-radius: 50%;
@@ -412,7 +401,7 @@ button {
 .left-score-badge {
   position: absolute;
   left: 110px;
-  top: 135px;
+  top: 130px;
   z-index: 12;
   display: flex;
   align-items: center;
@@ -465,9 +454,9 @@ button {
 .center-zone {
   position: absolute;
   left: 50%;
-  bottom: 12px;
+  bottom: 25px;
   transform: translateX(-50%);
-  width: min(52vw, 650px);
+  width: min(50vw, 600px);
   min-width: 420px;
   height: 380px;
   z-index: 8;
@@ -478,12 +467,12 @@ button {
   left: 50%;
   bottom: 60px;
   transform: translateX(-50%);
-  width: 360px;
-  height: 360px;
+  width: 340px;
+  height: 340px;
   border-radius: 50%;
   background: rgba(118, 78, 49, 0.95);
   border: 8px solid rgba(59, 37, 24, 0.9);
-  box-shadow: inset 0 0 0 18px rgba(146, 104, 72, 0.8), 0 10px 0 rgba(59, 37, 24, 0.18);
+  box-shadow: inset 0 0 0 16px rgba(146, 104, 72, 0.8), 0 8px 0 rgba(59, 37, 24, 0.18);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -493,8 +482,8 @@ button {
 
 .kiwi-clicker-body {
   position: relative;
-  width: 210px;
-  height: 170px;
+  width: 220px;
+  height: 180px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -561,7 +550,7 @@ button {
   left: 50%;
   bottom: 80px;
   transform: translateX(-50%);
-  width: 330px;
+  width: 280px;
   background: linear-gradient(180deg, rgba(77, 204, 255, 0.92), rgba(52, 162, 220, 0.92));
   border: 5px solid rgba(45, 116, 159, 0.9);
   border-radius: 14px 14px 8px 8px;
@@ -673,7 +662,7 @@ button {
 .bubble-tip {
   position: absolute;
   left: 58%;
-  bottom: 96px;
+  bottom: 110px;
   transform: translateX(-50%);
   padding: 10px 16px;
   max-width: 210px;
