@@ -1,6 +1,7 @@
 const totalCoinsEl = document.getElementById('totalCoins');
 const totalKiwisEl = document.getElementById('totalKiwis');
 const levelValueEl = document.getElementById('levelValue');
+const levelValueBottomEl = document.getElementById('levelValueBottom');
 const kiwiPerSecondEl = document.getElementById('kiwiPerSecond');
 const upgradeCostEl = document.getElementById('upgradeCost');
 const clickPowerValueEl = document.getElementById('clickPowerValue');
@@ -41,6 +42,7 @@ function updateScreen() {
   totalCoinsEl.textContent = `${Math.floor(state.coins)} coins`;
   totalKiwisEl.textContent = Math.floor(state.coins);
   levelValueEl.textContent = state.level;
+  levelValueBottomEl.textContent = state.level;
   kiwiPerSecondEl.textContent = Math.floor(state.passivePerSecond);
   upgradeCostEl.textContent = state.upgradeCost;
   clickPowerValueEl.textContent = state.clickPower;
@@ -48,12 +50,11 @@ function updateScreen() {
 }
 
 function showNotEnough() {
-  const block = document.querySelector('.not-enough');
-  if (!block) return;
+  if (!notEnoughEl) return;
 
-  block.classList.add('show');
+  notEnoughEl.classList.add('show');
   clearTimeout(showNotEnough.timer);
-  showNotEnough.timer = setTimeout(() => block.classList.remove('show'), 900);
+  showNotEnough.timer = setTimeout(() => notEnoughEl.classList.remove('show'), 900);
 }
 
 function addCoins(amount) {
@@ -127,21 +128,27 @@ function tick() {
   }
 }
 
-kiwiButton.addEventListener('click', clickKiwi);
-kiwiButton.addEventListener('keydown', (event) => {
-  if (event.code === 'Space' || event.code === 'Enter') {
-    event.preventDefault();
-    clickKiwi();
-  }
-});
+if (kiwiButton) {
+  kiwiButton.addEventListener('click', clickKiwi);
+  kiwiButton.addEventListener('keydown', (event) => {
+    if (event.code === 'Space' || event.code === 'Enter') {
+      event.preventDefault();
+      clickKiwi();
+    }
+  });
+}
 
-shopButton.addEventListener('click', upgrade);
+if (shopButton) {
+  shopButton.addEventListener('click', upgrade);
+}
 
-soundToggle.addEventListener('click', () => {
-  state.soundOn = !state.soundOn;
-  updateScreen();
-  saveGame();
-});
+if (soundToggle) {
+  soundToggle.addEventListener('click', () => {
+    state.soundOn = !state.soundOn;
+    updateScreen();
+    saveGame();
+  });
+}
 
 window.addEventListener('keydown', (event) => {
   if (event.code === 'Space') {

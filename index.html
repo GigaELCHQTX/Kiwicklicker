@@ -8,44 +8,33 @@
   </head>
   <body>
     <div class="game-shell">
-      <button class="sound-toggle" id="soundToggle" aria-label="Sound on/off">🔊</button>
+      <div class="sky-scene">
+        <div class="cloud cloud-one"></div>
+        <div class="cloud cloud-two"></div>
 
-      <header class="top-bar">
-        <div class="skilltree-box">
-          <div class="skilltree-title">Skilltree</div>
-          <div class="skilltree-subtitle">Spend <span class="tiny-glyph">◎</span> to activate<br />skill bonuses</div>
+        <button class="sound-toggle" id="soundToggle" aria-label="Sound on/off">🔊</button>
+
+        <div class="top-hud">
+          <div class="coin-hud">
+            <div class="coin-icon">🥝</div>
+            <span id="totalCoins">0 coins</span>
+          </div>
         </div>
 
-        <div class="small-token-box">
-          <div class="token-badge">✦</div>
-          <span id="tokens">0</span>
+        <div class="castle castle-left">
+          <div class="tower tower-left"></div>
+          <div class="tower tower-right"></div>
+          <div class="castle-arch"></div>
+          <div class="flag-stand flag-left"></div>
+          <div class="flag-stand flag-right"></div>
         </div>
 
-        <div class="coin-box">
-          <div class="coin-badge">🥝</div>
-          <span id="totalCoins">2 627 coins</span>
-        </div>
-      </header>
-
-      <main class="scene">
-        <div class="panel bagger-panel">
-          <div class="panel-badge">85</div>
-          <div class="panel-title">Bagger</div>
-          <div class="panel-copy">Fills deliveries with<br />this amount of <span class="small-kiwi">🥝</span></div>
-          <div class="panel-level">LEVEL <span>1</span></div>
-        </div>
-
-        <div class="panel castle-panel">
-          <div class="panel-badge">5. Castle</div>
-          <div class="panel-title">Castle</div>
-          <div class="panel-copy">Gives you <span class="small-glyph">◎</span> for<br />your <span class="small-glyph">◎</span> deliveries</div>
-          <div class="panel-copy small">Defeat the King<br />to receive <span class="small-glyph text-blue">◎</span><br />unlock at <span class="small-glyph">◎</span>100k</div>
-        </div>
-
-        <div class="panel storage-panel">
-          <div class="panel-badge storage-badge">1434 kiwis</div>
-          <div class="panel-title large">Storage</div>
-          <div class="panel-copy">All your <span class="small-kiwi">🥝</span> are<br />kept here</div>
+        <div class="castle castle-right">
+          <div class="tower tower-left"></div>
+          <div class="tower tower-right"></div>
+          <div class="castle-arch"></div>
+          <div class="flag-stand flag-left"></div>
+          <div class="flag-stand flag-right"></div>
         </div>
 
         <div class="security-building">
@@ -58,13 +47,24 @@
           </div>
         </div>
 
-        <div class="security-label">Security</div>
-        <div class="security-sub">Looks for illegal items</div>
-        <div class="security-sub second">Click to speed up</div>
+        <div class="left-side-kiwi">
+          <div class="kiwi-mini-body"></div>
+        </div>
 
-        <div class="middle-kiwi-wrap">
-          <div class="kiwi-button" id="kiwiButton" tabindex="0" aria-label="Click to gain kiwis">
-            <div class="kiwi-body">
+        <div class="right-side-kiwi">
+          <div class="kiwi-mini-body"></div>
+        </div>
+
+        <div class="left-score-badge">
+          <div class="score-ring">
+            <div class="small-kiwi"></div>
+          </div>
+          <span id="totalKiwis">0</span>
+        </div>
+
+        <div class="center-zone">
+          <div class="clicker-ring" id="kiwiButton" tabindex="0" aria-label="Click to gain kiwis">
+            <div class="kiwi-clicker-body">
               <div class="kiwi-face">
                 <div class="kiwi-eye left"></div>
                 <div class="kiwi-eye right"></div>
@@ -73,19 +73,52 @@
               </div>
             </div>
           </div>
-          <div class="mini-kiwi-text">Kiwi</div>
-          <div class="has-text">Auto-Kiwi</div>
-          <div class="auto-copy">Gives <span class="small-glyph">◎</span> every few seconds</div>
+
+          <div class="upgrade-card">
+            <div class="upgrade-header">UPGRADE</div>
+            <div class="upgrade-body">
+              <div class="stat-row">
+                <span>CLICK</span>
+                <span class="value-box accent" id="clickPowerValue">1</span>
+              </div>
+
+              <div class="stat-row">
+                <span>LEVEL</span>
+                <span class="value-box" id="levelValue">0</span>
+              </div>
+
+              <div class="upgrade-row">
+                <div class="mini-badge active">1x</div>
+                <div class="mini-badge">2x</div>
+                <div class="mini-badge">3x</div>
+              </div>
+
+              <div class="shop-row">
+                <button class="upgrade-button" id="shopButton">UPGRADE</button>
+                <span class="cost-badge" id="upgradeCost">25</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="bubble-tip">Click to earn kiwi!</div>
         </div>
 
-        <div class="bottom-center-copy">
-          <div class="click-line">Click or spacebar</div>
-          <div class="gain-line">to gain <span class="small-glyph">◎</span></div>
+        <div class="bottom-level">
+          <span>LEVEL</span>
+          <strong id="levelValueBottom">0</strong>
         </div>
 
-        <div class="help-button">Open / Close HELP SCREEN</div>
-        <div class="close-button">×</div>
-      </main>
+        <div class="boost-text">
+          <span class="boost-label">AUTO</span>
+          <span id="kiwiPerSecond">0</span>
+        </div>
+
+        <div class="right-help">
+          <div class="mini-round">?</div>
+        </div>
+
+        <div class="not-enough" id="notEnough">Not enough</div>
+      </div>
     </div>
 
     <script src="script.js"></script>
