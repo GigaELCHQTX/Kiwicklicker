@@ -10,55 +10,64 @@
     <div class="game-shell">
       <button class="sound-toggle" id="soundToggle" aria-label="Sound on/off">🔊</button>
 
+      <div class="top-hud">
+        <div class="coin-hud">
+          <div class="coin-icon">🥝</div>
+          <span id="totalCoins">485 coins</span>
+        </div>
+      </div>
+
       <div class="sky-scene">
-        <div class="cloud cloud-a"></div>
-        <div class="cloud cloud-b"></div>
+        <div class="cloud cloud-one"></div>
+        <div class="cloud cloud-two"></div>
 
         <div class="castle castle-left">
           <div class="tower tower-left"></div>
           <div class="tower tower-right"></div>
-          <div class="flag flag-left"></div>
-          <div class="flag flag-right"></div>
+          <div class="castle-arch"></div>
+          <div class="flag-stand flag-left"></div>
+          <div class="flag-stand flag-right"></div>
         </div>
 
         <div class="castle castle-right">
           <div class="tower tower-left"></div>
           <div class="tower tower-right"></div>
-          <div class="flag flag-left"></div>
-          <div class="flag flag-right"></div>
+          <div class="castle-arch"></div>
+          <div class="flag-stand flag-left"></div>
+          <div class="flag-stand flag-right"></div>
         </div>
 
         <div class="security-building">
           <div class="roof"></div>
           <div class="security-sign">SECURITY</div>
-          <div class="guard">
-            <div class="guard-head">
-              <div class="eye left"></div>
-              <div class="eye right"></div>
-              <div class="beak"></div>
-            </div>
+          <div class="guard-head">
+            <div class="eye left"></div>
+            <div class="eye right"></div>
+            <div class="beak"></div>
           </div>
         </div>
 
-        <div class="ground"></div>
+        <div class="farmland"></div>
 
-        <div class="left-side-kiwi kiwi-mini">
-          <div class="mini-body"></div>
+        <div class="left-side-kiwi">
+          <div class="kiwi-mini-body"></div>
         </div>
 
-        <div class="right-side-kiwi kiwi-mini">
-          <div class="mini-body"></div>
-        </div>
-
-        <div class="score-badge">
-          <span class="score-icon">⚡</span>
+        <div class="left-score-badge">
+          <div class="score-ring">
+            <div class="small-kiwi"></div>
+          </div>
           <span id="totalKiwis">25</span>
         </div>
 
-        <div class="center-clicker-wrap">
-          <div class="clicker-ring" id="kiwiButton" aria-label="Make kiwis" tabindex="0">
-            <div class="kiwi-clicker">
-              <div class="kiwi-body">
+        <div class="right-side-kiwi">
+          <div class="kiwi-mini-body"></div>
+        </div>
+
+        <div class="center-zone">
+          <div class="clicker-ring" id="kiwiButton" tabindex="0" aria-label="Make kiwis">
+            <div class="kiwi-clicker-body">
+              <div class="kiwi-face">
                 <div class="kiwi-eye left"></div>
                 <div class="kiwi-eye right"></div>
                 <div class="kiwi-beak"></div>
@@ -67,27 +76,43 @@
             </div>
           </div>
 
-          <div class="click-help" id="clickHelp">
-            <span>CLICK or SPACE</span>
-            <span>to make</span>
+          <div class="upgrade-card">
+            <div class="upgrade-header">KIWI KURSOR</div>
+            <div class="upgrade-body">
+              <div class="stat-row">
+                <span>CLICK KIWIS</span>
+                <div class="value-box" id="clickPowerValue">2</div>
+                <div class="value-box accent">3</div>
+              </div>
+
+              <div class="upgrade-row">
+                <div class="mini-badge">x1</div>
+                <div class="mini-badge">x5</div>
+                <div class="mini-badge">x25</div>
+                <div class="mini-badge active">MAX</div>
+              </div>
+
+              <div class="shop-row">
+                <button class="upgrade-button" id="shopButton">UPGRADE</button>
+                <div class="cost-badge"><span id="upgradeCost">25</span></div>
+              </div>
+            </div>
           </div>
 
-          <div class="badge-level">
+          <div class="bubble-tip">Nice! Upgrade EVEN MORE!</div>
+          <div class="bottom-level">
             <span>LEVEL</span>
             <strong id="levelValue">0</strong>
           </div>
 
-          <div class="bonus-display">
+          <div class="boost-text">
             <span id="kiwiPerSecond">0</span>
-            <span class="bonus-label">kiwis</span>
+            <span class="boost-label">kiwis</span>
           </div>
-
-          <div class="not-enough" id="notEnough">NOT ENOUGH KIWIS</div>
         </div>
 
-        <div class="shop-button" id="shopButton">
-          <span class="shop-icon">⚡</span>
-          <span>Upgrade</span>
+        <div class="right-help">
+          <div class="mini-round">?</div>
         </div>
       </div>
     </div>
